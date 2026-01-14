@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane prefWidth="900" prefHeight="750" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.baccalaureatplus.controller.SoloGameController"
+           style="-fx-background-color: linear-gradient(to bottom right, #FFDEE9, #B5FFFC, #BCC5FF);">
+    
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="10">
+            <padding><Insets top="15" bottom="15" left="30" right="30"/></padding>
+            <children>
+                
+                <AnchorPane prefHeight="80">
+                    <children>
+                        <VBox layoutX="10" layoutY="10">
+                            <Label fx:id="timerLabel" text="120s" style="-fx-font-size: 28; -fx-text-fill: #F86DA3; -fx-font-weight: 900;"/>
+                            <Label fx:id="scoreLabel" text="SCORE : 0" style="-fx-font-size: 12; -fx-font-weight: bold; -fx-text-fill: #5D5D5D;"/>
+                        </VBox>
+
+                        <StackPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <StackPane prefWidth="80" prefHeight="80" maxWidth="80"
+                                           style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #59C9FF; -fx-border-width: 3; -fx-border-radius: 17;">
+                                    <children>
+                                        <Label fx:id="lettreLabel" text="?" style="-fx-font-size: 40; -fx-font-weight: 900; -fx-text-fill: #59C9FF;"/>
+                                    </children>
+                                    <effect><DropShadow color="#59c9ff44" radius="10" offsetY="3"/></effect>
+                                </StackPane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </AnchorPane>
+
+                <VBox fx:id="gameContainer" spacing="8" alignment="CENTER">
+                    <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 10 20; -fx-max-width: 650;">
+                        <StackPane prefWidth="40" prefHeight="40" style="-fx-background-color: #F0F4FF; -fx-background-radius: 10;">
+                            <SVGPath content="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="#59C9FF" scaleX="1.1" scaleY="1.1"/>
+                        </StackPane>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <Label text="PRÉNOM" style="-fx-font-size: 10; -fx-font-weight: bold; -fx-text-fill: #adb5bd;"/>
+                            <TextField fx:id="fieldPrenom" promptText="Qui ?" style="-fx-background-color: transparent; -fx-font-size: 16; -fx-padding: 0;"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 10 20; -fx-max-width: 650;">
+                        <StackPane prefWidth="40" prefHeight="40" style="-fx-background-color: #FFF0F4; -fx-background-radius: 10;">
+                            <SVGPath content="M20 10c0-4.42-3.58-8-8-8s-8 3.58-8 8c0 3.12 1.79 5.83 4.41 7.16L9 22h6l-1.41-4.84C18.21 15.83 20 13.12 20 10z" fill="#F86DA3" scaleX="1.1" scaleY="1.1"/>
+                        </StackPane>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <Label text="FRUIT &amp; LÉGUME" style="-fx-font-size: 10; -fx-font-weight: bold; -fx-text-fill: #adb5bd;"/>
+                            <HBox spacing="10">
+                                <TextField fx:id="fieldFruit" promptText="Fruit" HBox.hgrow="ALWAYS" style="-fx-background-color: transparent; -fx-font-size: 16; -fx-padding: 0;"/>
+                                <Separator orientation="VERTICAL"/>
+                                <TextField fx:id="fieldLegume" promptText="Légume" HBox.hgrow="ALWAYS" style="-fx-background-color: transparent; -fx-font-size: 16; -fx-padding: 0;"/>
+                            </HBox>
+                        </VBox>
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 10 20; -fx-max-width: 650;">
+                        <StackPane prefWidth="40" prefHeight="40" style="-fx-background-color: #F0FFF4; -fx-background-radius: 10;">
+                            <SVGPath content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 13l-4-4 1.41-1.41L10 12.17l7.59-7.59L19 6l-9 9z" fill="#2ECC71" scaleX="1.1" scaleY="1.1"/>
+                        </StackPane>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <Label text="ANIMAL" style="-fx-font-size: 10; -fx-font-weight: bold; -fx-text-fill: #adb5bd;"/>
+                            <TextField fx:id="fieldAnimal" promptText="Quel animal ?" style="-fx-background-color: transparent; -fx-font-size: 16; -fx-padding: 0;"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 10 20; -fx-max-width: 650;">
+                        <StackPane prefWidth="40" prefHeight="40" style="-fx-background-color: #FDF5E6; -fx-background-radius: 10;">
+                            <SVGPath content="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#E67E22" scaleX="1.1" scaleY="1.1"/>
+                        </StackPane>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <Label text="PAYS &amp; VILLE" style="-fx-font-size: 10; -fx-font-weight: bold; -fx-text-fill: #adb5bd;"/>
+                            <HBox spacing="10">
+                                <TextField fx:id="fieldPays" promptText="Pays" HBox.hgrow="ALWAYS" style="-fx-background-color: transparent; -fx-font-size: 16; -fx-padding: 0;"/>
+                                <Separator orientation="VERTICAL"/>
+                                <TextField fx:id="fieldVille" promptText="Ville" HBox.hgrow="ALWAYS" style="-fx-background-color: transparent; -fx-font-size: 16; -fx-padding: 0;"/>
+                            </HBox>
+                        </VBox>
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 10 20; -fx-max-width: 650;">
+                        <StackPane prefWidth="40" prefHeight="40" style="-fx-background-color: #ECEFF1; -fx-background-radius: 10;">
+                            <SVGPath content="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" fill="#607D8B" scaleX="1.1" scaleY="1.1"/>
+                        </StackPane>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <Label text="OBJET" style="-fx-font-size: 10; -fx-font-weight: bold; -fx-text-fill: #adb5bd;"/>
+                            <TextField fx:id="fieldObjet" promptText="Un objet ?" style="-fx-background-color: transparent; -fx-font-size: 16; -fx-padding: 0;"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Champ de saisie du nom du joueur -->
+                <VBox alignment="CENTER" spacing="5" style="-fx-padding: 10 0 0 0;">
+                    <Label text="Entrez votre prénom pour commencer" style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #5D5D5D;"/>
+                    <TextField fx:id="nomJoueurField" promptText="Votre prénom..." prefWidth="300" maxWidth="300"
+                               style="-fx-background-color: white; -fx-background-radius: 20; -fx-padding: 12 20; -fx-font-size: 15; -fx-border-color: #F86DA3; -fx-border-width: 2; -fx-border-radius: 20;">
+                        <effect><DropShadow color="#f86da333" radius="8" offsetY="3"/></effect>
+                    </TextField>
+                </VBox>
+
+                <HBox alignment="CENTER" spacing="20" prefHeight="100">
+                    <StackPane>
+                        <Button fx:id="startBtn" onAction="#lancerPartie" text="JOUER" prefWidth="180" prefHeight="60"
+                                style="-fx-background-color: #F86DA3; -fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold; -fx-background-radius: 30; -fx-cursor: hand;"/>
+                        
+                        <Button fx:id="validerBtn" onAction="#validerPartie" text="TERMINER" prefWidth="180" prefHeight="60" visible="false" managed="false"
+                                style="-fx-background-color: #F86DA3; -fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold; -fx-background-radius: 30; -fx-cursor: hand;">
+                            <effect><DropShadow color="#f86da366" radius="15" offsetY="5"/></effect>
+                        </Button>
+                    </StackPane>
+
+                    <Button fx:id="quitterBtn" onAction="#retourMenu" text="QUITTER" prefWidth="180" prefHeight="60"
+                            style="-fx-background-color: #F86DA3; -fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold; -fx-background-radius: 30; -fx-cursor: hand;"/>
+                </HBox>
+
+            </children>
+        </VBox>
+    </children>
+</StackPane>

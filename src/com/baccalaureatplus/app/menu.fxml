@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane prefWidth="600" prefHeight="850" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.baccalaureatplus.controller.MenuController"
+           style="-fx-background-color: linear-gradient(to bottom right, #FFDEE9, #B5FFFC, #BCC5FF);">
+    
+    <children>
+        <Circle radius="220" fill="#ffffff30" translateX="-180" translateY="-300">
+            <effect><GaussianBlur radius="60" /></effect>
+        </Circle>
+
+        <VBox alignment="CENTER" spacing="40">
+            <children>
+                <StackPane fx:id="logoContainer">
+                    <children>
+                        <Circle radius="135" fill="white">
+                            <effect>
+                                <DropShadow color="#00000033" radius="30" offsetX="0" offsetY="15" />
+                            </effect>
+                        </Circle>
+                        <ImageView fitWidth="250" preserveRatio="true">
+                            <image>
+                                <Image url="file:src/com/baccalaureatplus/app/logo.jpg" />
+                            </image>
+                            <clip>
+                                <Circle centerX="125" centerY="125" radius="125" />
+                            </clip>
+                        </ImageView>
+                        <Circle radius="125" fill="transparent" stroke="white" strokeWidth="2" opacity="0.5" />
+                    </children>
+                </StackPane>
+
+                <Label text="Baccalauréat+" 
+                       style="-fx-font-size: 54px; -fx-font-family: 'Georgia'; -fx-font-style: italic; -fx-text-fill: #4e4e4e; -fx-letter-spacing: 3px;">
+                    <effect>
+                        <DropShadow color="#ffffff" radius="1" offsetX="1" offsetY="1" />
+                        <DropShadow color="#00000020" radius="5" offsetX="0" offsetY="3" />
+                    </effect>
+                </Label>
+
+                <VBox alignment="CENTER" spacing="25" maxWidth="450" 
+                      style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 45; -fx-border-color: rgba(255, 255, 255, 0.6); -fx-border-width: 2.5; -fx-border-radius: 45;">
+                    <padding>
+                        <Insets top="40" bottom="40" left="25" right="25" />
+                    </padding>
+                    <children>
+                        <Button fx:id="btnSolo" text="JOUER SOLO" onAction="#lancerSolo" prefWidth="300" prefHeight="65"
+                                style="-fx-background-color: linear-gradient(to bottom, #FF85A2, #F86DA3); -fx-text-fill: white; -fx-font-size: 17px; -fx-font-weight: bold; -fx-background-radius: 50; -fx-cursor: hand; -fx-letter-spacing: 2px;">
+                            <effect>
+                                <DropShadow color="#f86da388" radius="20" offsetX="0" offsetY="10" />
+                            </effect>
+                        </Button>
+                        
+                        <Button fx:id="btnMulti" text="JOUER MULTI" onAction="#lancerMulti" prefWidth="300" prefHeight="65"
+                                style="-fx-background-color: linear-gradient(to bottom, #70D6FF, #59C9FF); -fx-text-fill: white; -fx-font-size: 17px; -fx-font-weight: bold; -fx-background-radius: 50; -fx-cursor: hand; -fx-letter-spacing: 2px;">
+                            <effect>
+                                <DropShadow color="#59c9ff88" radius="20" offsetX="0" offsetY="10" />
+                            </effect>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</StackPane>
